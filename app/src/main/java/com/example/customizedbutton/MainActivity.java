@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,5 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         TargetButtonNormal.setVisibility(next);
+    }
+
+    public void onEnabledChangeButtonClicked(View view) {
+        boolean next = TargetButtonNormal.isEnabled() ? false : true;
+        TargetButtonNormal.setEnabled(next);
     }
 }
